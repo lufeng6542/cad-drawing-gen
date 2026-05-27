@@ -1,0 +1,158 @@
+# 6层住宅给排水系统轴测图 示例配置
+# 符合 GB/T 50106-2010 标准
+
+building:
+  floors: 6
+  floor_height: 3000  # mm
+  basement: 1
+
+systems:
+  - type: 给水
+    title: "给水系统轴测图"
+    code: J
+    risers:
+      - id: JL-1
+        position: [0, 0]
+        diameter: DN50
+        branches:
+          - floor: 1
+            diameter: DN25
+            length: 4000
+            direction: x
+            fixtures:
+              - type: 水表
+                position: [800, 0]
+              - type: 水龙头
+                position: [4000, 0]
+                drop: 500
+              - type: 洗脸盆
+                position: [2500, 0]
+                drop: 600
+          - floor: 2
+            diameter: DN25
+            length: 4000
+            direction: x
+            fixtures:
+              - type: 水龙头
+                position: [4000, 0]
+                drop: 500
+              - type: 洗脸盆
+                position: [2500, 0]
+                drop: 600
+              - type: 坐便器
+                position: [4000, 2000]
+                drop: 300
+          - floor: 3
+            diameter: DN25
+            length: 4000
+            direction: x
+            fixtures:
+              - type: 水龙头
+                position: [4000, 0]
+                drop: 500
+              - type: 洗脸盆
+                position: [2500, 0]
+                drop: 600
+          - floor: 4
+            diameter: DN25
+            length: 4000
+            direction: x
+            fixtures:
+              - type: 水龙头
+                position: [4000, 0]
+                drop: 500
+              - type: 洗脸盆
+                position: [2500, 0]
+                drop: 600
+          - floor: 5
+            diameter: DN25
+            length: 4000
+            direction: x
+            fixtures:
+              - type: 水龙头
+                position: [4000, 0]
+                drop: 500
+              - type: 洗脸盆
+                position: [2500, 0]
+                drop: 600
+          - floor: 6
+            diameter: DN20
+            length: 3000
+            direction: x
+            fixtures:
+              - type: 水龙头
+                position: [3000, 0]
+                drop: 500
+        valves:
+          - type: 闸阀
+            position: 入口
+            floor: 0
+          - type: 止回阀
+            position: 入口
+            floor: 0
+
+  - type: 排水
+    title: "排水系统轴测图"
+    code: W
+    risers:
+      - id: WL-1
+        position: [7000, 0]
+        diameter: DN100
+        outlet_length: 3000
+        branches:
+          - floor: 1
+            diameter: DN75
+            length: 3000
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [3000, 0]
+              - type: 洗脸盆
+                position: [1500, 0]
+          - floor: 2
+            diameter: DN75
+            length: 3000
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [3000, 0]
+              - type: 洗脸盆
+                position: [1500, 0]
+              - type: 坐便器
+                position: [3000, 1500]
+          - floor: 3
+            diameter: DN75
+            length: 3000
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [3000, 0]
+              - type: 洗脸盆
+                position: [1500, 0]
+          - floor: 4
+            diameter: DN75
+            length: 3000
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [3000, 0]
+          - floor: 5
+            diameter: DN75
+            length: 3000
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [3000, 0]
+          - floor: 6
+            diameter: DN75
+            length: 2500
+            direction: x
+            slope: "i=0.020"
+            fixtures:
+              - type: 地漏
+                position: [2500, 0]
